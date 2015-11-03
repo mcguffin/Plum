@@ -15,10 +15,12 @@ class Plum(object):
     def create(self):
         if self.glyph_exists:
             self.glyph.addGuide(self.position, self.angle, name=GUIDE_NAME)
+            self.update()
 
     def destroy(self):
         if self.glyph_exists:
             self.glyph.removeGuide(self.plum_guide)
+            self.update()
 
     def update(self):
         if self.glyph_exists:
